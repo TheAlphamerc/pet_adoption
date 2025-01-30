@@ -13,9 +13,3 @@ class PetsLoaded extends PetState {
 
   PetsLoaded(this.pets, {this.filteredPets = const [], super.filter});
 }
-
-class PetAdopted extends PetState {
-  final List<Pet> pets;
-
-  PetAdopted(this.pets);
-}

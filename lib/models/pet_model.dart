@@ -39,9 +39,9 @@ class Pet with _$Pet {
 @freezed
 class Attributes with _$Attributes {
   const factory Attributes({
-    required bool isFriendly,
-    required bool? isHouseTrained,
-    required bool isVacinated,
+    @Default(false) bool isFriendly,
+    @Default(false) bool isHouseTrained,
+    @Default(false) bool isVaccinated,
   }) = _Attributes;
 
   factory Attributes.fromJson(Map<String, dynamic> json) =>

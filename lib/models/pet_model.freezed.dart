@@ -605,8 +605,8 @@ Attributes _$AttributesFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Attributes {
   bool get isFriendly => throw _privateConstructorUsedError;
-  bool? get isHouseTrained => throw _privateConstructorUsedError;
-  bool get isVacinated => throw _privateConstructorUsedError;
+  bool get isHouseTrained => throw _privateConstructorUsedError;
+  bool get isVaccinated => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -620,7 +620,7 @@ abstract class $AttributesCopyWith<$Res> {
           Attributes value, $Res Function(Attributes) then) =
       _$AttributesCopyWithImpl<$Res, Attributes>;
   @useResult
-  $Res call({bool isFriendly, bool? isHouseTrained, bool isVacinated});
+  $Res call({bool isFriendly, bool isHouseTrained, bool isVaccinated});
 }
 
 /// @nodoc
@@ -637,21 +637,21 @@ class _$AttributesCopyWithImpl<$Res, $Val extends Attributes>
   @override
   $Res call({
     Object? isFriendly = null,
-    Object? isHouseTrained = freezed,
-    Object? isVacinated = null,
+    Object? isHouseTrained = null,
+    Object? isVaccinated = null,
   }) {
     return _then(_value.copyWith(
       isFriendly: null == isFriendly
           ? _value.isFriendly
           : isFriendly // ignore: cast_nullable_to_non_nullable
               as bool,
-      isHouseTrained: freezed == isHouseTrained
+      isHouseTrained: null == isHouseTrained
           ? _value.isHouseTrained
           : isHouseTrained // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      isVacinated: null == isVacinated
-          ? _value.isVacinated
-          : isVacinated // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isVaccinated: null == isVaccinated
+          ? _value.isVaccinated
+          : isVaccinated // ignore: cast_nullable_to_non_nullable
               as bool,
     ) as $Val);
   }
@@ -665,7 +665,7 @@ abstract class _$$AttributesImplCopyWith<$Res>
       __$$AttributesImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool isFriendly, bool? isHouseTrained, bool isVacinated});
+  $Res call({bool isFriendly, bool isHouseTrained, bool isVaccinated});
 }
 
 /// @nodoc
@@ -680,21 +680,21 @@ class __$$AttributesImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? isFriendly = null,
-    Object? isHouseTrained = freezed,
-    Object? isVacinated = null,
+    Object? isHouseTrained = null,
+    Object? isVaccinated = null,
   }) {
     return _then(_$AttributesImpl(
       isFriendly: null == isFriendly
           ? _value.isFriendly
           : isFriendly // ignore: cast_nullable_to_non_nullable
               as bool,
-      isHouseTrained: freezed == isHouseTrained
+      isHouseTrained: null == isHouseTrained
           ? _value.isHouseTrained
           : isHouseTrained // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      isVacinated: null == isVacinated
-          ? _value.isVacinated
-          : isVacinated // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isVaccinated: null == isVaccinated
+          ? _value.isVaccinated
+          : isVaccinated // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
   }
@@ -704,23 +704,26 @@ class __$$AttributesImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AttributesImpl implements _Attributes {
   const _$AttributesImpl(
-      {required this.isFriendly,
-      required this.isHouseTrained,
-      required this.isVacinated});
+      {this.isFriendly = false,
+      this.isHouseTrained = false,
+      this.isVaccinated = false});
 
   factory _$AttributesImpl.fromJson(Map<String, dynamic> json) =>
       _$$AttributesImplFromJson(json);
 
   @override
+  @JsonKey()
   final bool isFriendly;
   @override
-  final bool? isHouseTrained;
+  @JsonKey()
+  final bool isHouseTrained;
   @override
-  final bool isVacinated;
+  @JsonKey()
+  final bool isVaccinated;
 
   @override
   String toString() {
-    return 'Attributes(isFriendly: $isFriendly, isHouseTrained: $isHouseTrained, isVacinated: $isVacinated)';
+    return 'Attributes(isFriendly: $isFriendly, isHouseTrained: $isHouseTrained, isVaccinated: $isVaccinated)';
   }
 
   @override
@@ -732,14 +735,14 @@ class _$AttributesImpl implements _Attributes {
                 other.isFriendly == isFriendly) &&
             (identical(other.isHouseTrained, isHouseTrained) ||
                 other.isHouseTrained == isHouseTrained) &&
-            (identical(other.isVacinated, isVacinated) ||
-                other.isVacinated == isVacinated));
+            (identical(other.isVaccinated, isVaccinated) ||
+                other.isVaccinated == isVaccinated));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode =>
-      Object.hash(runtimeType, isFriendly, isHouseTrained, isVacinated);
+      Object.hash(runtimeType, isFriendly, isHouseTrained, isVaccinated);
 
   @JsonKey(ignore: true)
   @override
@@ -757,9 +760,9 @@ class _$AttributesImpl implements _Attributes {
 
 abstract class _Attributes implements Attributes {
   const factory _Attributes(
-      {required final bool isFriendly,
-      required final bool? isHouseTrained,
-      required final bool isVacinated}) = _$AttributesImpl;
+      {final bool isFriendly,
+      final bool isHouseTrained,
+      final bool isVaccinated}) = _$AttributesImpl;
 
   factory _Attributes.fromJson(Map<String, dynamic> json) =
       _$AttributesImpl.fromJson;
@@ -767,9 +770,9 @@ abstract class _Attributes implements Attributes {
   @override
   bool get isFriendly;
   @override
-  bool? get isHouseTrained;
+  bool get isHouseTrained;
   @override
-  bool get isVacinated;
+  bool get isVaccinated;
   @override
   @JsonKey(ignore: true)
   _$$AttributesImplCopyWith<_$AttributesImpl> get copyWith =>

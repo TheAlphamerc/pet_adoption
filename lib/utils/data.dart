@@ -49,7 +49,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": true,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -72,7 +72,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": true,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -95,7 +95,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": true,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -118,7 +118,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": true,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -141,7 +141,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": false,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -164,7 +164,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": false,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -187,7 +187,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": true,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -210,7 +210,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": true,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -233,7 +233,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": false,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -256,7 +256,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": true,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -279,7 +279,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": false,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -302,7 +302,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": false,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -325,7 +325,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": true,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -348,7 +348,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": false,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -371,7 +371,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": false,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -394,7 +394,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": true,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -417,7 +417,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": true,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -440,7 +440,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": false,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -463,7 +463,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": true,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -486,7 +486,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": false,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -509,7 +509,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": false,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -532,7 +532,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": true,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -555,7 +555,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": true,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -578,7 +578,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": false,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -601,7 +601,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": true,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -624,7 +624,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": false,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -647,7 +647,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": false,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -670,7 +670,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": true,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -693,7 +693,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": false,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -716,7 +716,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": false,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -739,7 +739,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": true,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -762,7 +762,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": false,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -785,7 +785,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": false,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -808,7 +808,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": true,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -831,7 +831,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": false,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -854,7 +854,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": false,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -877,7 +877,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": true,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -900,7 +900,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": true,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -923,7 +923,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": false,
-            "isVacinated": true
+            "isVaccinated": true
           }
         },
         {
@@ -946,7 +946,7 @@ class Data {
           "attributes": {
             "isFriendly": true,
             "isHouseTrained": true,
-            "isVacinated": true
+            "isVaccinated": true
           }
         }
       ]

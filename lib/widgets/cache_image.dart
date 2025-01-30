@@ -8,11 +8,13 @@ class CacheImage extends StatelessWidget {
     this.fit = BoxFit.contain,
     this.errorWidget,
     this.placeholder,
+    this.onTap,
   });
   final String path;
   final BoxFit fit;
   final Widget? errorWidget;
   final Widget? placeholder;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -22,24 +24,27 @@ class CacheImage extends StatelessWidget {
         color: Theme.of(context).cardColor,
       );
     }
-    return CachedNetworkImage(
-      imageUrl: path,
-      fit: fit,
-      maxWidthDiskCache: 200,
-      cacheKey: path,
-      placeholder: (context, url) =>
-          placeholder ??
-          Container(
-            constraints: const BoxConstraints.tightForFinite(),
-            color: Theme.of(context).cardColor,
-          ),
-      errorWidget: (context, url, dym) {
-        return errorWidget ??
+    return GestureDetector(
+      onTap: onTap,
+      child: CachedNetworkImage(
+        imageUrl: path,
+        fit: fit,
+        maxWidthDiskCache: 200,
+        cacheKey: path,
+        placeholder: (context, url) =>
+            placeholder ??
             Container(
               constraints: const BoxConstraints.tightForFinite(),
               color: Theme.of(context).cardColor,
-            );
-      },
+            ),
+        errorWidget: (context, url, dym) {
+          return errorWidget ??
+              Container(
+                constraints: const BoxConstraints.tightForFinite(),
+                color: Theme.of(context).cardColor,
+              );
+        },
+      ),
     );
   }
 }

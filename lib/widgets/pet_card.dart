@@ -31,7 +31,9 @@ class PetCard extends StatelessWidget {
               width: double.infinity,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
-                color: context.theme.cardColor,
+                color: pet.isAdopted
+                    ? context.colorScheme.secondary.withOpacity(.2)
+                    : context.theme.cardColor,
                 border: Border.all(
                   color: context.theme.colorScheme.secondary.withOpacity(0.1),
                   width: .5,
@@ -66,7 +68,16 @@ class PetCard extends StatelessWidget {
                             size: 16,
                             color: context.theme.colorScheme.primary,
                           ),
-                      }
+                      },
+                      if (pet.isAdopted) ...[
+                        const Spacer(),
+                        Text(
+                          'Already adopted',
+                          style: context.theme.textTheme.bodySmall!.copyWith(
+                            color: context.theme.colorScheme.secondary,
+                          ),
+                        ),
+                      ]
                     ],
                   ),
                   const SizedBox(height: 4),
@@ -127,15 +138,6 @@ class PetCard extends StatelessWidget {
                 ),
               ),
             ),
-            Positioned(
-              right: 8,
-              top: 4,
-              child: IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.favorite_border),
-                iconSize: 16,
-              ),
-            )
           ],
         ),
       ),

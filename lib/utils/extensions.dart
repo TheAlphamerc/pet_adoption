@@ -13,4 +13,7 @@ extension ThemeHelper on BuildContext {
   ThemeType get themeType =>
       theme.brightness == Brightness.light ? ThemeType.LIGHT : ThemeType.DARK;
   bool get isDarkMode => themeType == ThemeType.DARK;
+
+  double get screenWidth => MediaQuery.of(this).size.width;
+  double get screenHeight => MediaQuery.of(this).size.height;
 }

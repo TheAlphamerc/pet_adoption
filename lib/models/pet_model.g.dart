@@ -59,6 +59,7 @@ const _$SpeciesEnumMap = {
   Species.CAT: 'CAT',
   Species.DOG: 'DOG',
   Species.RABBIT: 'RABBIT',
+  Species.ALL: 'ALL',
 };
 
 const _$GenderEnumMap = {
@@ -74,14 +75,14 @@ const _$SizeEnumMap = {
 
 _$AttributesImpl _$$AttributesImplFromJson(Map<String, dynamic> json) =>
     _$AttributesImpl(
-      isFriendly: json['isFriendly'] as bool,
-      isHouseTrained: json['isHouseTrained'] as bool?,
-      isVacinated: json['isVacinated'] as bool,
+      isFriendly: json['isFriendly'] as bool? ?? false,
+      isHouseTrained: json['isHouseTrained'] as bool? ?? false,
+      isVaccinated: json['isVaccinated'] as bool? ?? false,
     );
 
 Map<String, dynamic> _$$AttributesImplToJson(_$AttributesImpl instance) =>
     <String, dynamic>{
       'isFriendly': instance.isFriendly,
       'isHouseTrained': instance.isHouseTrained,
-      'isVacinated': instance.isVacinated,
+      'isVaccinated': instance.isVaccinated,
     };

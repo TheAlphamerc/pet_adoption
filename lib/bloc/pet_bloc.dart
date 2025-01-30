@@ -32,7 +32,6 @@ class PetBloc extends Bloc<PetEvent, PetState> {
         return pet;
       }).toList();
       emit(PetsLoaded(updatedPets, filteredPets: updatedPets));
-      emit(PetAdopted(updatedPets));
     }
   }
 

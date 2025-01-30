@@ -1,7 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:confetti/confetti.dart'; // Add this package to your pubspec.yaml
+import 'package:confetti/confetti.dart';
+import 'package:pet_adoption/utils/extensions.dart'; // Add this package to your pubspec.yaml
 
 class ConfettiPopup extends StatefulWidget {
   final String petName;
@@ -18,7 +19,8 @@ class _ConfettiPopupState extends State<ConfettiPopup> {
   @override
   void initState() {
     super.initState();
-    _confettiController = ConfettiController(duration: const Duration(seconds: 2));
+    _confettiController =
+        ConfettiController(duration: const Duration(seconds: 2));
     _confettiController.play();
   }
 
@@ -31,13 +33,28 @@ class _ConfettiPopupState extends State<ConfettiPopup> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: const Text('Congratulations!'),
-      content: Column(
-        mainAxisSize: MainAxisSize.min,
+      content: Stack(
+        alignment: Alignment.bottomRight,
         children: [
-          Text('You\'ve adopted ${widget.petName}'),
+          Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                'Congratulations!',
+                style: context.textTheme.headlineMedium,
+              ),
+              const SizedBox(height: 12),
+              Text('You\'ve adopted ${widget.petName}'),
+              TextButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                child: const Text('OK'),
+              ),
+            ],
+          ),
           SizedBox(
-            height: 20,
+            height: 50,
             width: 200,
             child: ConfettiWidget(
               confettiController: _confettiController,
@@ -52,17 +69,9 @@ class _ConfettiPopupState extends State<ConfettiPopup> {
                 Colors.purple,
               ],
             ),
-          )
+          ),
         ],
       ),
-      actions: [
-        TextButton(
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-          child: const Text('OK'),
-        ),
-      ],
     );
   }
 

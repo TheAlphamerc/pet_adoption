@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pet_adoption/utils/data.dart';
+import 'package:pet_adoption/utils/extensions.dart';
+import 'package:pet_adoption/widgets/cache_image.dart';
+import 'package:pet_adoption/widgets/pet_card.dart';
 import '../bloc/pet_bloc.dart';
 
 class HistoryScreen extends StatelessWidget {
@@ -24,16 +28,36 @@ class HistoryScreen extends StatelessWidget {
       ),
       body: BlocBuilder<PetBloc, PetState>(
         builder: (context, state) {
-          if (state is PetAdopted) {
+          if (state is PetsLoaded) {
             final adoptedPets =
                 state.pets.where((pet) => pet.isAdopted).toList();
-            return ListView.builder(
+            return GridView.builder(
               itemCount: adoptedPets.length,
+              padding: const EdgeInsets.symmetric(vertical: 12),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 3,
+                crossAxisSpacing: 8,
+                mainAxisSpacing: 8,
+                childAspectRatio: 1,
+              ),
               itemBuilder: (context, index) {
                 final pet = adoptedPets[index];
-                return ListTile(
-                  title: Text(pet.name),
-                  subtitle: Text('Adopted on ${DateTime.now()}'),
+                return Column(
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(40),
+                      child: SizedBox(
+                        width: 80,
+                        height: 80,
+                        child: CacheImage(
+                          path: Data.getPicture(pet.type, pet.id),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    Text(pet.name, style: context.textTheme.titleMedium),
+                  ],
                 );
               },
             );

@@ -10,8 +10,8 @@ class MaterialTheme {
   static MaterialScheme lightScheme() {
     return const MaterialScheme(
       brightness: Brightness.light,
-      primary: Color(0xff5d5791),
-      surfaceTint: Color(0xff5d5791),
+      primary: Color.fromARGB(255, 97, 83, 231),
+      surfaceTint: Color.fromARGB(194, 140, 128, 255),
       onPrimary: Color(0xffffffff),
       primaryContainer: Color(0xffe4dfff),
       onPrimaryContainer: Color(0xff191249),
@@ -70,7 +70,7 @@ class MaterialTheme {
     return const MaterialScheme(
       brightness: Brightness.light,
       primary: Color(0xff413c73),
-      surfaceTint: Color(0xff5d5791),
+      surfaceTint: Color.fromARGB(255, 97, 83, 231),
       onPrimary: Color(0xffffffff),
       primaryContainer: Color(0xff746ea9),
       onPrimaryContainer: Color(0xffffffff),
@@ -129,7 +129,7 @@ class MaterialTheme {
     return const MaterialScheme(
       brightness: Brightness.light,
       primary: Color(0xff201950),
-      surfaceTint: Color(0xff5d5791),
+      surfaceTint: Color.fromARGB(255, 97, 83, 231),
       onPrimary: Color(0xffffffff),
       primaryContainer: Color(0xff413c73),
       onPrimaryContainer: Color(0xffffffff),
@@ -216,7 +216,7 @@ class MaterialTheme {
       scrim: Color(0xff000000),
       inverseSurface: Color(0xffe5e1e9),
       inverseOnSurface: Color(0xff313036),
-      inversePrimary: Color(0xff5d5791),
+      inversePrimary: Color.fromARGB(255, 97, 83, 231),
       primaryFixed: Color(0xffe4dfff),
       onPrimaryFixed: Color(0xff191249),
       primaryFixedDim: Color(0xffc6bfff),

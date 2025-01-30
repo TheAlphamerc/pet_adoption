@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pet_adoption/screens/history_screen.dart';
@@ -56,8 +57,12 @@ class HomeScreen extends StatelessWidget {
           BlocBuilder<PetBloc, PetState>(
             builder: (context, state) {
               if (state is PetsLoading) {
-                return const SliverToBoxAdapter(
-                  child: Center(child: CircularProgressIndicator()),
+                return SliverToBoxAdapter(
+                  child: Container(
+                    height: context.screenHeight * .7,
+                    alignment: Alignment.center,
+                    child: const CircularProgressIndicator(),
+                  ),
                 );
               }
               if (state is PetsLoaded) {
@@ -71,8 +76,13 @@ class HomeScreen extends StatelessWidget {
                   ),
                 );
               }
-              return const SliverToBoxAdapter(
-                  child: Center(child: Text('No pets available')));
+              return SliverToBoxAdapter(
+                child: Container(
+                  height: context.screenHeight * .7,
+                  alignment: Alignment.center,
+                  child: const Text('No pets available'),
+                ),
+              );
             },
           ),
         ],
