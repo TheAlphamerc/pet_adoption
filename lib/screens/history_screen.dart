@@ -31,6 +31,9 @@ class HistoryScreen extends StatelessWidget {
           if (state is PetsLoaded) {
             final adoptedPets =
                 state.pets.where((pet) => pet.isAdopted).toList();
+            if (adoptedPets.isEmpty) {
+              return const Center(child: Text('No adoption history'));
+            }
             return GridView.builder(
               itemCount: adoptedPets.length,
               padding: const EdgeInsets.symmetric(vertical: 12),

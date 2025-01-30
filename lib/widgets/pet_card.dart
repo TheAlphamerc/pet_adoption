@@ -30,21 +30,27 @@ class PetCard extends StatelessWidget {
               margin: const EdgeInsets.only(left: 30),
               width: double.infinity,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: const BorderRadius.horizontal(
+                  left: Radius.circular(35),
+                  right: Radius.circular(12),
+                ),
                 color: pet.isAdopted
                     ? context.colorScheme.secondary.withOpacity(.2)
                     : context.theme.cardColor,
                 border: Border.all(
-                  color: context.theme.colorScheme.secondary.withOpacity(0.1),
+                  color: context.theme.colorScheme.onSurface.withOpacity(0.1),
                   width: .5,
                 ),
-                boxShadow: <BoxShadow>[
-                  BoxShadow(
-                    color: context.theme.colorScheme.secondary.withOpacity(0.1),
-                    blurRadius: 15,
-                    spreadRadius: 10,
-                  ),
-                ],
+                boxShadow: context.isDarkMode
+                    ? null
+                    : <BoxShadow>[
+                        BoxShadow(
+                          color: context.theme.colorScheme.secondary
+                              .withOpacity(0.1),
+                          blurRadius: 15,
+                          spreadRadius: 10,
+                        ),
+                      ],
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -127,13 +133,26 @@ class PetCard extends StatelessWidget {
             Hero(
               tag: pet.id,
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(14),
                 child: SizedBox(
-                  width: 60,
-                  height: 60,
+                  width: 70,
+                  height: 70,
                   child: CacheImage(
                     path: Data.getPicture(pet.type, pet.id),
                     fit: BoxFit.cover,
+                    placeholder: Container(
+                      width: 70,
+                      height: 70,
+                      decoration: BoxDecoration(
+                        color: context.theme.colorScheme.surfaceTint,
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(
+                          color:
+                              context.theme.colorScheme.surface.withOpacity(.2),
+                          width: .5,
+                        ),
+                      ),
+                    ),
                   ),
                 ),
               ),

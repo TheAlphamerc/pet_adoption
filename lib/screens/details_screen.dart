@@ -112,14 +112,20 @@ class DetailsScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                         color: context.colorScheme.surface,
                         borderRadius: BorderRadius.circular(20),
-                        boxShadow: [
-                          BoxShadow(
-                            color:
-                                context.colorScheme.onSurface.withOpacity(.1),
-                            blurRadius: 16,
-                            offset: const Offset(0, 4),
-                          ),
-                        ],
+                        border: Border.all(
+                          color: context.colorScheme.onSurface.withOpacity(.1),
+                          width: .5,
+                        ),
+                        boxShadow: context.isDarkMode
+                            ? null
+                            : [
+                                BoxShadow(
+                                  color: context.colorScheme.onSurface
+                                      .withOpacity(.1),
+                                  blurRadius: 16,
+                                  offset: const Offset(0, 4),
+                                ),
+                              ],
                       ),
                       child: Column(
                         children: [
