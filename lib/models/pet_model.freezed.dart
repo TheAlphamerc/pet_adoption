@@ -175,7 +175,7 @@ mixin _$Pet {
   dynamic get isFavorite => throw _privateConstructorUsedError;
   double get price => throw _privateConstructorUsedError;
   dynamic get isAdopted => throw _privateConstructorUsedError;
-  String get picture => throw _privateConstructorUsedError;
+  String? get picture => throw _privateConstructorUsedError;
   String get distance => throw _privateConstructorUsedError;
   Attributes get attributes => throw _privateConstructorUsedError;
 
@@ -202,7 +202,7 @@ abstract class $PetCopyWith<$Res> {
       dynamic isFavorite,
       double price,
       dynamic isAdopted,
-      String picture,
+      String? picture,
       String distance,
       Attributes attributes});
 
@@ -233,7 +233,7 @@ class _$PetCopyWithImpl<$Res, $Val extends Pet> implements $PetCopyWith<$Res> {
     Object? isFavorite = freezed,
     Object? price = null,
     Object? isAdopted = freezed,
-    Object? picture = null,
+    Object? picture = freezed,
     Object? distance = null,
     Object? attributes = null,
   }) {
@@ -286,10 +286,10 @@ class _$PetCopyWithImpl<$Res, $Val extends Pet> implements $PetCopyWith<$Res> {
           ? _value.isAdopted
           : isAdopted // ignore: cast_nullable_to_non_nullable
               as dynamic,
-      picture: null == picture
+      picture: freezed == picture
           ? _value.picture
           : picture // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       distance: null == distance
           ? _value.distance
           : distance // ignore: cast_nullable_to_non_nullable
@@ -329,7 +329,7 @@ abstract class _$$PetImplCopyWith<$Res> implements $PetCopyWith<$Res> {
       dynamic isFavorite,
       double price,
       dynamic isAdopted,
-      String picture,
+      String? picture,
       String distance,
       Attributes attributes});
 
@@ -358,7 +358,7 @@ class __$$PetImplCopyWithImpl<$Res> extends _$PetCopyWithImpl<$Res, _$PetImpl>
     Object? isFavorite = freezed,
     Object? price = null,
     Object? isAdopted = freezed,
-    Object? picture = null,
+    Object? picture = freezed,
     Object? distance = null,
     Object? attributes = null,
   }) {
@@ -405,10 +405,10 @@ class __$$PetImplCopyWithImpl<$Res> extends _$PetCopyWithImpl<$Res, _$PetImpl>
           : price // ignore: cast_nullable_to_non_nullable
               as double,
       isAdopted: freezed == isAdopted ? _value.isAdopted! : isAdopted,
-      picture: null == picture
+      picture: freezed == picture
           ? _value.picture
           : picture // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       distance: null == distance
           ? _value.distance
           : distance // ignore: cast_nullable_to_non_nullable
@@ -426,20 +426,20 @@ class __$$PetImplCopyWithImpl<$Res> extends _$PetCopyWithImpl<$Res, _$PetImpl>
 class _$PetImpl implements _Pet {
   const _$PetImpl(
       {required this.id,
-      required this.type,
+      this.type = Species.DOG,
       this.breeds,
-      required this.age,
+      this.age = 0,
       required this.gender,
-      required this.size,
+      this.size = Size.MEDIUM,
       required this.name,
       this.description,
-      required this.weight,
+      this.weight = 0,
       this.isFavorite = false,
-      required this.price,
+      this.price = 0,
       this.isAdopted = false,
-      required this.picture,
-      required this.distance,
-      required this.attributes});
+      this.picture,
+      this.distance = 'N/A',
+      this.attributes = const Attributes()});
 
   factory _$PetImpl.fromJson(Map<String, dynamic> json) =>
       _$$PetImplFromJson(json);
@@ -447,34 +447,41 @@ class _$PetImpl implements _Pet {
   @override
   final int id;
   @override
+  @JsonKey()
   final Species type;
   @override
   final String? breeds;
   @override
+  @JsonKey()
   final int age;
   @override
   final Gender gender;
   @override
+  @JsonKey()
   final Size size;
   @override
   final String name;
   @override
   final String? description;
   @override
+  @JsonKey()
   final double weight;
   @override
   @JsonKey()
   final dynamic isFavorite;
   @override
+  @JsonKey()
   final double price;
   @override
   @JsonKey()
   final dynamic isAdopted;
   @override
-  final String picture;
+  final String? picture;
   @override
+  @JsonKey()
   final String distance;
   @override
+  @JsonKey()
   final Attributes attributes;
 
   @override
@@ -545,20 +552,20 @@ class _$PetImpl implements _Pet {
 abstract class _Pet implements Pet {
   const factory _Pet(
       {required final int id,
-      required final Species type,
+      final Species type,
       final String? breeds,
-      required final int age,
+      final int age,
       required final Gender gender,
-      required final Size size,
+      final Size size,
       required final String name,
       final String? description,
-      required final double weight,
+      final double weight,
       final dynamic isFavorite,
-      required final double price,
+      final double price,
       final dynamic isAdopted,
-      required final String picture,
-      required final String distance,
-      required final Attributes attributes}) = _$PetImpl;
+      final String? picture,
+      final String distance,
+      final Attributes attributes}) = _$PetImpl;
 
   factory _Pet.fromJson(Map<String, dynamic> json) = _$PetImpl.fromJson;
 
@@ -587,7 +594,7 @@ abstract class _Pet implements Pet {
   @override
   dynamic get isAdopted;
   @override
-  String get picture;
+  String? get picture;
   @override
   String get distance;
   @override

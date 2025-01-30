@@ -20,21 +20,22 @@ Map<String, dynamic> _$$PetResponseImplToJson(_$PetResponseImpl instance) =>
 
 _$PetImpl _$$PetImplFromJson(Map<String, dynamic> json) => _$PetImpl(
       id: (json['id'] as num).toInt(),
-      type: $enumDecode(_$SpeciesEnumMap, json['type']),
+      type: $enumDecodeNullable(_$SpeciesEnumMap, json['type']) ?? Species.DOG,
       breeds: json['breeds'] as String?,
-      age: (json['age'] as num).toInt(),
+      age: (json['age'] as num?)?.toInt() ?? 0,
       gender: $enumDecode(_$GenderEnumMap, json['gender']),
-      size: $enumDecode(_$SizeEnumMap, json['size']),
+      size: $enumDecodeNullable(_$SizeEnumMap, json['size']) ?? Size.MEDIUM,
       name: json['name'] as String,
       description: json['description'] as String?,
-      weight: (json['weight'] as num).toDouble(),
+      weight: (json['weight'] as num?)?.toDouble() ?? 0,
       isFavorite: json['isFavorite'] ?? false,
-      price: (json['price'] as num).toDouble(),
+      price: (json['price'] as num?)?.toDouble() ?? 0,
       isAdopted: json['isAdopted'] ?? false,
-      picture: json['picture'] as String,
-      distance: json['distance'] as String,
-      attributes:
-          Attributes.fromJson(json['attributes'] as Map<String, dynamic>),
+      picture: json['picture'] as String?,
+      distance: json['distance'] as String? ?? 'N/A',
+      attributes: json['attributes'] == null
+          ? const Attributes()
+          : Attributes.fromJson(json['attributes'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$PetImplToJson(_$PetImpl instance) => <String, dynamic>{

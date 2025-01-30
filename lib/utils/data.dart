@@ -6,8 +6,8 @@ class Data {
       Species.DOG: [
         'https://images.pexels.com/photos/5255248/pexels-photo-5255248.jpeg?auto=compress&cs=tinysrgb&h=320&dpr=2',
         'https://images.pexels.com/photos/3523317/pexels-photo-3523317.jpeg?auto=compress&cs=tinysrgb&h=250&dpr=2',
-        'https://images.pexels.com/photos/30401419/pexels-photo-30401419/free-photo-of-adorable-boston-terrier-in-pink-jacket-outdoors.jpeg?auto=compress&cs=tinysrgb&h=320&dpr=2'
-            'https://images.pexels.com/photos/25752626/pexels-photo-25752626/free-photo-of-head-of-dog-in-snow.jpeg?auto=compress&cs=tinysrgb&w=1260&h=320&dpr=2'
+        'https://images.pexels.com/photos/30401419/pexels-photo-30401419/free-photo-of-adorable-boston-terrier-in-pink-jacket-outdoors.jpeg?auto=compress&cs=tinysrgb&h=320&dpr=2',
+        'https://images.pexels.com/photos/25752626/pexels-photo-25752626/free-photo-of-head-of-dog-in-snow.jpeg?auto=compress&cs=tinysrgb&w=1260&h=320&dpr=2'
       ],
       Species.CAT: [
         'https://images.pexels.com/photos/289381/pexels-photo-289381.jpeg?auto=compress&cs=tinysrgb&w=320&dpr=2',

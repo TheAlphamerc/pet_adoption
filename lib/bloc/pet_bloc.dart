@@ -1,3 +1,6 @@
+import 'dart:math';
+
+import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../models/pet_model.dart';
@@ -67,7 +70,8 @@ class PetBloc extends Bloc<PetEvent, PetState> {
     if (currentState is PetsLoaded) {
       final allPets = currentState.pets;
       final filteredPets = allPets
-          .where((pet) => pet.name.toLowerCase().contains(event.query))
+          .where((pet) =>
+              pet.name.toLowerCase().contains(event.query.toLowerCase()))
           .toList();
       emit(
         PetsLoaded(

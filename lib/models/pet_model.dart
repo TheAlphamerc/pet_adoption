@@ -17,20 +17,20 @@ class PetResponse with _$PetResponse {
 class Pet with _$Pet {
   const factory Pet({
     required int id,
-    required Species type,
+    @Default(Species.DOG) Species type,
     String? breeds,
-    required int age,
+    @Default(0) int age,
     required Gender gender,
-    required Size size,
+    @Default(Size.MEDIUM) Size size,
     required String name,
     String? description,
-    required double weight,
+    @Default(0) double weight,
     @Default(false) isFavorite,
-    required double price,
+    @Default(0) double price,
     @Default(false) isAdopted,
-    required String picture,
-    required String distance,
-    required Attributes attributes,
+    String? picture,
+    @Default('N/A') String distance,
+    @Default(Attributes()) Attributes attributes,
   }) = _Pet;
 
   factory Pet.fromJson(Map<String, dynamic> json) => _$PetFromJson(json);
