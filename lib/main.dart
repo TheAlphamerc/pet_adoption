@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: const MaterialTheme().light(),
       darkTheme: const MaterialTheme().dark(),
       debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.system,
       home: BlocProvider(
         create: (context) => PetBloc(PetRepository())..add(LoadPets()),
         child: const HomeScreen(),
